@@ -49,5 +49,3 @@ This repository contains a curated collection of small-scale Data Science and Ma
 - Apply deep learning to NLP and Computer Vision problems
 - Understand the effectiveness of transfer learning
 - Build interpretable models with visualizations and metrics
-
----
