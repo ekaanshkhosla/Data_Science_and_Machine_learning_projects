@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h1 class="container-heading"><span style="text-decoration: underline;"><span class="heading_font">Car Price Predictor</span></span></h1>
+            <div class='description'>
+    			<p><em>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</em></p>
+    		</div>
+    	</div>
+
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h3><span style="color: #000000;">Enter Year</h3><input id="first" name="Year" placeholder="Eg: 2010" type="number ">
+            <h3><span style="color: #000000;">What is the Showroom Price?(In lakhs)</h3><input id="second" name="Present_Price" placeholder="Eg: 5.5" required="required">
+            <h3><span style="color: #000000;">How Many Kilometers Drived?</h3><input id="third" name="Kms_Driven" placeholder="Eg: 10000" required="required">
+            <h3><span style="color: #000000;">How much owners previously had the car(0 or 1 or 3) ?</span></h3><input id="fourth" name="Owner" required="required">
+			
+            <h3><span style="color: #000000;">What Is the Fuel type?</h3><select name="Fuel_Type_Petrol" id="fuel" required="required">
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Diesel">CNG</option>
+            </select>
+            <h3><span style="color: #000000;">Are you A Dealer or Individual</h3><select name="Seller_Type_Individual" id="resea" required="required">
+                <option value="Dealer">Dealer</option>
+                <option value="Individual">Individual</option>
+            </select>
+            <h3><span style="color: #000000;">Transmission type</h3><select name="Transmission_Mannual" id="research" required="required">
+                <option value="Mannual">Manual Car</option>
+                <option value="Automatic">Automatic Car</option>
+            </select>
+            <br><br><br><br><button id="sub" type="submit ">Calculate the Selling Price</button>
+
+        </form>
+
+
+
+        <br><h1><span style="color: #000000;">{{ prediction_text }}<h1>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: #cbe4ff;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        
+        #fuel {
+            width: 200px;
+            height: 30px;
+			background-color: #ffffff;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 17px;
+        }
+        
+        #fuel:hover {
+            background-color: #ffffff;
+        }
+        
+        #research {
+            width: 200px;
+            height: 30px;
+			background-color: #ffffff;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 17px;
+        }
+        
+        #research:hover {
+            background-color: #ffffff;
+        }
+        
+        #resea {
+            width: 200px;
+            height: 30px;
+			background-color: #ffffff;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 17px;
+        }
+        
+        #resea:hover {
+            background-color: #ffffff;
+        }
+        
+        #sub {
+            width: 300px;
+            height: 50px;
+            text-align: center;
+            border-radius: 15px;
+            font-size: 20px;
+        }
+        
+        #sub:hover {
+            background-color: #8ac0fb;
+        }
+        
+        #first {
+            border-radius: 5px;
+            height: 25px;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 5px;
+            height: 25px;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 5px;
+            height: 25px;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 5px;
+            height: 25px;
+            font-size: 16px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
