@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+	<body>
+
+		<!-- Website Title -->
+		
+		
+    	<div class="container">
+    		<h1 class='container-heading'><span style="text-decoration: underline;">Spam Detector for Short Message Service (SMS)</span> </h1>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==1 %}
+				<h1><br><br><br><br>Prediction: <span class='danger' style="color: #f32525;" >Gotcha! This is a SPAM message.</span></h1>
+			{% elif prediction==0 %}
+				<h1><br><br><br><br>Prediction: <span class='safe'  style="color: #29b711;" >Great! This is NOT a spam message.</span></h1>
+			{% endif %}
+		</div>
+		
+		
+		<style>
+			body {
+				background-color: #cbe4ff;
+				text-align: center;
+				padding: 0px;
+			}
+		
+		</style>
+
+
+	</body>
+</html>

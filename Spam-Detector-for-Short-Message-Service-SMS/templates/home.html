@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+    		<h1 class='container-heading'><span style="text-decoration: underline;">Spam Detector for Short Message Service (SMS)</span> </h1>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container"><br><br>
+    		<form action="{{ url_for('predict') }}" method="POST">
+        		<textarea class='message-box' name="message" rows="15" cols="75" placeholder="Enter Your Message Here..."></textarea><br/>
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+		
+		<style>
+			body {
+				background-color: #cbe4ff;
+				text-align: center;
+				padding: 0px;
+			}
+		
+		</style>
+		
+
+
+    </body>
+</html>
